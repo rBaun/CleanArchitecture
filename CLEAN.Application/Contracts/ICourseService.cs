@@ -8,5 +8,6 @@ namespace CLEAN.Application.Contracts
     public interface ICourseService
     {
         CourseViewModel GetCourses();
+        void CreateCourse(CourseViewModel courseViewModel);
     }
 }
