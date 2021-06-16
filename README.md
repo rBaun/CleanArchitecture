@@ -2,17 +2,27 @@
 Example of [Uncle Bob's Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html "Uncle Bob's Clean Architecture") implemented in ASP.NET
 
 The goal of this project is to create a demo with a CLEAN Architecture approach. 
-The demo will include 4 different layer:
+The demo will include 4 different layers:
 
 * Domain Layer
+  * Domain.Core Layer 
 * Application Layer
 * Infrastructure Layer
   * Infrastructure.IoC Layer
   * Infrastructure.Persistence Layer
+  * Infrastructure.MessageBus Layer
 * Presentation Layer
+  * Presentation.MVC
+  * Presentation.API
 
 The purpose is to get a clear understanding of how to take the clean approach to writing code. This demo can be re-used to any project and 
 can be adjusted to fit any requirements. This means that the CLEAN approach is not limited to the chosen layers, but can be complimented according to your needs.
+
+The primary goal is to lean, where these technologies have been in focus:
+* CLEAN Architecture
+* EntityFramework
+* MessageBus / MediatR
+* AutoMapper
 
 ## Domain Layer
 The domain layer is the heart of the application, containing the core models. 
@@ -26,6 +36,8 @@ But, keep in mind that CLEAN is all about pushing the details outwards, meaning 
 ## Infrastructure Layer
 The interfaces defined in the Application Layer will be implemented in this layer. This can be details about databases, web services, files, message bus, logging, configuration, etc. This layer is all about technical details, where the previous layer can somewhat be understood by business oriented people. 
 
+### MessageBus / MediatR
+Details coming...
 
 ## Presentation Layer
 The Presentation Layer is what the end user is interacting with. This can be MVC Controllers, Web API Controllers, Swagger, Authentication, etc. 
