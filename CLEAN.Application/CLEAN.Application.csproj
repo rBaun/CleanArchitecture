@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CLEAN.Domain.Entities\CLEAN.Domain.csproj" />
   </ItemGroup>
 
