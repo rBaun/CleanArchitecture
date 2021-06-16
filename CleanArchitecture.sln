@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLEAN.Application", "CLEAN.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLEAN.Infrastructure.IoC", "CLEAN.Infrastructure.IoC\CLEAN.Infrastructure.IoC.csproj", "{8CF7A61D-56FD-48C0-8ECB-256E280BC125}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure.MessageBus", "Infrastructure.MessageBus", "{176FE472-4B79-4FD4-B17F-61B4194479CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLEAN.Infrastructure.MessageBus", "CLEAN.Infrastructure.MessageBus\CLEAN.Infrastructure.MessageBus.csproj", "{D3B6EE83-303C-4258-A307-E4771EA02C34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,10 @@ Global
 		{8CF7A61D-56FD-48C0-8ECB-256E280BC125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF7A61D-56FD-48C0-8ECB-256E280BC125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF7A61D-56FD-48C0-8ECB-256E280BC125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B6EE83-303C-4258-A307-E4771EA02C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B6EE83-303C-4258-A307-E4771EA02C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B6EE83-303C-4258-A307-E4771EA02C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B6EE83-303C-4258-A307-E4771EA02C34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,7 @@ Global
 		{CEC37E9E-5814-4C2A-9DFC-DDB36A5097E6} = {B05745A6-F3A7-4533-B227-93392E09B608}
 		{C386B592-A4CF-4953-8A3F-E6EB055AAE41} = {3D864925-5C25-41BF-AA2A-9F8D38ECBC2C}
 		{8CF7A61D-56FD-48C0-8ECB-256E280BC125} = {6D09F296-248D-4CC2-8E69-DE88959EAFCC}
+		{D3B6EE83-303C-4258-A307-E4771EA02C34} = {176FE472-4B79-4FD4-B17F-61B4194479CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ABB7935C-6432-49B4-BD6B-1071A0789F63}
