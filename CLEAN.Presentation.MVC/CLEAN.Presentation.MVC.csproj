@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CLEAN.Infrastructure.IoC\CLEAN.Infrastructure.IoC.csproj" />
-    <ProjectReference Include="..\CLEAN.Infrastructure.Persistence\CLEAN.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

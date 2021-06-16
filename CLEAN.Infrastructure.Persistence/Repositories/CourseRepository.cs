@@ -20,5 +20,11 @@ namespace CLEAN.Infrastructure.Persistence.Repositories
         {
             return _universityDbContext.Courses;
         }
+
+        public void Add(Course course)
+        {
+            _universityDbContext.Courses.Add(course);
+            _universityDbContext.SaveChanges();
+        }
     }
 }

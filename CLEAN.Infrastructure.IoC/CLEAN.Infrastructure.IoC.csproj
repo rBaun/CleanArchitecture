@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CLEAN.Application\CLEAN.Application.csproj" />
+    <ProjectReference Include="..\CLEAN.Domain.Core\CLEAN.Domain.Core.csproj" />
+    <ProjectReference Include="..\CLEAN.Infrastructure.MessageBus\CLEAN.Infrastructure.MessageBus.csproj" />
     <ProjectReference Include="..\CLEAN.Infrastructure.Persistence\CLEAN.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
