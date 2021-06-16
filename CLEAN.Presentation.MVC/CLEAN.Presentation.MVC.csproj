@@ -17,4 +17,8 @@
     <ProjectReference Include="..\CLEAN.Infrastructure.Persistence\CLEAN.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
