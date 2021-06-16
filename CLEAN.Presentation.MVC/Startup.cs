@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CLEAN.Infrastructure.IoC;
 using CLEAN.Infrastructure.Persistence.Context;
 
 namespace CLEAN.Presentation.MVC
@@ -41,6 +42,8 @@ namespace CLEAN.Presentation.MVC
             {
                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDbConnection"));
             });
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +75,11 @@ namespace CLEAN.Presentation.MVC
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            ServicesExtensions.RegisterServices(services);
         }
     }
 }

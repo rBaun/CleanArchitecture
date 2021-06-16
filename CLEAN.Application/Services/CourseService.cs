@@ -9,7 +9,7 @@ namespace CLEAN.Application.Services
 {
     public class CourseService : ICourseService
     {
-        private ICourseRepository _courseRepository;
+        private readonly ICourseRepository _courseRepository;
 
         public CourseService(ICourseRepository courseRepository)
         {
