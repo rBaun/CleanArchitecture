@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using CLEAN.Domain.Interfaces;
 using CLEAN.Domain.Models;
@@ -16,7 +17,7 @@ namespace CLEAN.Infrastructure.Persistence.Repositories
             _universityDbContext = universityDbContext;
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IQueryable<Course> GetCourses()
         {
             return _universityDbContext.Courses;
         }

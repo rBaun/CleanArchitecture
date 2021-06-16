@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CLEAN.Infrastructure.IoC;
 using CLEAN.Infrastructure.Persistence.Context;
+using CLEAN.Presentation.API.Configurations;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +44,8 @@ namespace CLEAN.Presentation.API
             });
 
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using CLEAN.Application.Contracts;
 using CLEAN.Application.ViewModels;
 using CLEAN.Domain.Commands;
@@ -13,29 +15,23 @@ namespace CLEAN.Application.Services
     {
         private readonly ICourseRepository _courseRepository;
         private readonly IMediatorHandler _messageBus;
+        private readonly IMapper _autoMapper;
 
-        public CourseService(ICourseRepository courseRepository, IMediatorHandler messageBus)
+        public CourseService(ICourseRepository courseRepository, IMediatorHandler messageBus, IMapper autoMapper)
         {
             _courseRepository = courseRepository;
             _messageBus = messageBus;
+            _autoMapper = autoMapper;
         }
 
-        public CourseViewModel GetCourses()
+        public IEnumerable<CourseViewModel> GetCourses()
         {
-            return new CourseViewModel
-            {
-                Courses = _courseRepository.GetCourses()
-            };
+            return _courseRepository.GetCourses().ProjectTo<CourseViewModel>(_autoMapper.ConfigurationProvider);
         }
 
         public void CreateCourse(CourseViewModel courseViewModel)
         {
-            var createCourseCommand = new CreateCourseCommand(
-                courseViewModel.Name, 
-                courseViewModel.Description, 
-                courseViewModel.ImageUrl);
-
-            _messageBus.SendCommand(createCourseCommand);
+            _messageBus.SendCommand(_autoMapper.Map<CreateCourseCommand>(courseViewModel));
         }
     }
 }

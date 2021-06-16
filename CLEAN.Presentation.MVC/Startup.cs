@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CLEAN.Infrastructure.IoC;
 using CLEAN.Infrastructure.Persistence.Context;
+using CLEAN.Presentation.MVC.Configurations;
 using MediatR;
 
 namespace CLEAN.Presentation.MVC
@@ -45,6 +46,8 @@ namespace CLEAN.Presentation.MVC
             });
 
             services.AddMediatR(typeof(Startup));
+
+            services.RegisterAutoMapper();
 
             RegisterServices(services);
         }

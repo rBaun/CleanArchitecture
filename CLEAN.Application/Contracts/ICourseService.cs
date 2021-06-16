@@ -7,7 +7,7 @@ namespace CLEAN.Application.Contracts
 {
     public interface ICourseService
     {
-        CourseViewModel GetCourses();
+        IEnumerable<CourseViewModel> GetCourses();
         void CreateCourse(CourseViewModel courseViewModel);
     }
 }
